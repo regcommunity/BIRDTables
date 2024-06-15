@@ -754,39 +754,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="BIRD_UPU_SYSTM_PRTY_ELDMs"
         upperBound="-1" eType="#//BIRD_UPU_SYSTM_PRTY_ELDM" containment="true" resolveProxies="false"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BIRD_VG_SNSTVTY_ELDM" eSuperTypes="#//Risk_measure_type">
-    <eAnnotations source="long_name">
-      <details key="long_name" value="Vega_sensitivity"/>
-    </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="UNDRLYNG_RSDL_MTRTY" unique="false"
-        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble">
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Underlying_residual_maturity"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="VG_SNSTVTY" unique="false"
-        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble">
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Vega_sensitivity"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="CRRNCY_RCRD" unique="false"
-        eType="ecore:EEnum sdd_domains.ecore#//CRRNCY_domain">
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Currency_of_record"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="OPTN_MTRTY" unique="false"
-        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble">
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Option_maturity"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BIRD_VG_SNSTVTY_ELDM_Table">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="BIRD_VG_SNSTVTY_ELDMs"
-        upperBound="-1" eType="#//BIRD_VG_SNSTVTY_ELDM" containment="true" resolveProxies="false"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BIRD_VG_SNSTVTY_ELDM_Table" eSuperTypes="#//BIRD_SNSTVTY_ELDM_Table"/>
   <eClassifiers xsi:type="ecore:EClass" name="BIRD_NTRL_PRSN_ELDM" eSuperTypes="#//BIRD_LGL_PRSN_ELDM">
     <eAnnotations source="long_name">
       <details key="long_name" value="Natural_person"/>
@@ -1718,9 +1686,6 @@
         eType="#//BIRD_OTC_DRVTV_BUYR_ASSGNMNT_ELDM" eOpposite="#//BIRD_OTC_DRVTV_BUYR_ASSGNMNT_ELDM/linked_BIRD_OTC_DRVTV_INSTRMNT_ELDM"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Over_the_counter_OTC_Derivative_instrument_has_Seller_via_Over_the_counter_OTC_Derivative_Seller_assignment_2wayassociation"
         eType="#//BIRD_OTC_DRVTV_SLLR_ASSGNMNT_ELDM" eOpposite="#//BIRD_OTC_DRVTV_SLLR_ASSGNMNT_ELDM/linked_BIRD_OTC_DRVTV_INSTRMNT_ELDM"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Over_the_counter_OTC_Derivative_instrument_specifies_Fundamental_review_of_the_trading_book_standard_approach_risk_measure_for_OTC_positions_2wayassociation"
-        upperBound="-1" eType="#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_OTC_PSTNS_ELDM"
-        eOpposite="#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_OTC_PSTNS_ELDM/linked_BIRD_OTC_DRVTV_INSTRMNT_ELDM"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BIRD_OTC_DRVTV_INSTRMNT_ELDM_Table">
     <eStructuralFeatures xsi:type="ecore:EReference" name="BIRD_OTC_DRVTV_INSTRMNT_ELDMs"
@@ -4758,6 +4723,60 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="BIRD_RSK_FAC_SA_ELDM_uniqueID"
         unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
         iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="MN_CRRNCY" unique="false"
+        eType="ecore:EEnum sdd_domains.ecore#//CRRNCY_domain">
+      <eAnnotations source="long_name">
+        <details key="long_name" value="Main_currency"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="SCND_CRRNCY" unique="false"
+        eType="ecore:EEnum sdd_domains.ecore#//CRRNCY_domain">
+      <eAnnotations source="long_name">
+        <details key="long_name" value="Second_currency"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="GIRR_FCTR_TYP" unique="false"
+        eType="ecore:EEnum sdd_domains.ecore#//GIRR_RSK_FCTR_domain">
+      <eAnnotations source="long_name">
+        <details key="long_name" value="General_interest_rate_risk_GIRR_factor_type"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="BS_CRRNCY" unique="false"
+        eType="ecore:EEnum sdd_domains.ecore#//CRRNCY_domain">
+      <eAnnotations source="long_name">
+        <details key="long_name" value="Base_currency"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="CRRNCY" unique="false"
+        eType="ecore:EEnum sdd_domains.ecore#//CRRNCY_domain">
+      <eAnnotations source="long_name">
+        <details key="long_name" value="Currency"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="EQUTY_FCTR_TYP" unique="false"
+        eType="ecore:EEnum sdd_domains.ecore#//EQUTY_FCTR_TYP_domain">
+      <eAnnotations source="long_name">
+        <details key="long_name" value="Equity_factor_type"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linked_BIRD_EQTY_SCRTY_ELDM"
+        lowerBound="1" eType="#//BIRD_EQTY_SCRTY_ELDM"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linked_BIRD_ISSR_ELDM"
+        lowerBound="1" eType="#//BIRD_ISSR_ELDM"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="DLVRY_LCTN" unique="false"
+        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString">
+      <eAnnotations source="long_name">
+        <details key="long_name" value="Delivery_location"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="CMMDTY_TYP" unique="false"
+        eType="ecore:EEnum sdd_domains.ecore#//CMMDTY_TYP_FRTB_domain">
+      <eAnnotations source="long_name">
+        <details key="long_name" value="Commodity_type"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linked_BIRD_ABS_ELDM" lowerBound="1"
+        eType="#//BIRD_ABS_ELDM"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BIRD_RSK_FAC_SA_ELDM_Table">
     <eStructuralFeatures xsi:type="ecore:EReference" name="BIRD_RSK_FAC_SA_ELDMs"
@@ -5766,39 +5785,17 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BIRD_SCRTSTN_CRRLTN_TRDNG_PRTFL_RSK_FCTR_STNDRDSD_APPRCH_ELDM_Table">
     <eStructuralFeatures xsi:type="ecore:EReference" name="BIRD_SCRTSTN_CRRLTN_TRDNG_PRTFL_RSK_FCTR_STNDRDSD_APPRCH_ELDMs"
-        upperBound="-1" eType="#//BIRD_SCRTSTN_CRRLTN_TRDNG_PRTFL_RSK_FCTR_STNDRDSD_APPRCH_ELDM"
-        containment="true" resolveProxies="false"/>
+        upperBound="-1" eType="#//BIRD_RSK_FAC_SA_ELDM" containment="true" resolveProxies="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BIRD_SCRTSTN_NN_CRRLTN_TRDNG_PRTFL_RSK_FCTR_FR_STNDRDSD_APPRCH_ELDM"
       eSuperTypes="#//BIRD_RSK_FAC_SA_ELDM">
     <eAnnotations source="long_name">
       <details key="long_name" value="Securitisation_non_correlation_trading_portfolio_non_CTP_Risk_Factor_for_standardised_approach"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ASST_BCKD_SCRTY_RPRTNG_AGNT_ID"
-        unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString">
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Asset_backed_Security_Reporting_agent_identifier"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ASST_BCKD_SCRTY_RFRNC_DT"
-        unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EDate">
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Asset_backed_Security_Reference_date"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ASST_BCKD_SCRTY_ID" unique="false"
-        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString">
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Asset_backed_Security_identifier"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="linked_BIRD_ABS_ELDM" lowerBound="1"
-        eType="#//BIRD_ABS_ELDM" eOpposite="#//BIRD_ABS_ELDM/Asset_backed_security_has_Securitisation_non_correlation_trading_portfolio_non_CTP_Risk_Factor_for_standardised_approach_2wayassociation"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BIRD_SCRTSTN_NN_CRRLTN_TRDNG_PRTFL_RSK_FCTR_FR_STNDRDSD_APPRCH_ELDM_Table">
     <eStructuralFeatures xsi:type="ecore:EReference" name="BIRD_SCRTSTN_NN_CRRLTN_TRDNG_PRTFL_RSK_FCTR_FR_STNDRDSD_APPRCH_ELDMs"
-        upperBound="-1" eType="#//BIRD_SCRTSTN_NN_CRRLTN_TRDNG_PRTFL_RSK_FCTR_FR_STNDRDSD_APPRCH_ELDM"
-        containment="true" resolveProxies="false"/>
+        upperBound="-1" eType="#//BIRD_RSK_FAC_SA_ELDM" containment="true" resolveProxies="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BIRD_SCRTSTN_TRNCH_ELDM">
     <eAnnotations source="long_name">
@@ -6780,9 +6777,6 @@
         lowerBound="1" eType="#//BIRD_SCRTY_ELDM" eOpposite="#//BIRD_SCRTY_ELDM/Security_is_involved_in_Security_position_2wayassociation"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Security_position_may_have_Security_position_derived_data_2wayassociation"
         eType="#//BIRD_SCRTY_PSTN_DRVD_DT_ELDM" eOpposite="#//BIRD_SCRTY_PSTN_DRVD_DT_ELDM/linked_BIRD_SCRTY_PSTN_ELDM"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Security_position_specifies_Fundamental_review_of_the_trading_book_standard_approach_risk_measure_for_security_positions_2wayassociation"
-        upperBound="-1" eType="#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_FR_SCRTY_PSTNS_ELDM"
-        eOpposite="#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_FR_SCRTY_PSTNS_ELDM/linked_BIRD_SCRTY_PSTN_ELDM"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BIRD_SCRTY_PSTN_ELDM_Table">
     <eStructuralFeatures xsi:type="ecore:EReference" name="BIRD_SCRTY_PSTN_ELDMs"
@@ -7290,9 +7284,6 @@
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Asset_backed_security_acts_as_a_Tranche_in_a_Traditional_securitisation_2wayassociation"
         eType="#//BIRD_TRNCH_TRDTNL_SCRTSTN_ELDM" eOpposite="#//BIRD_TRNCH_TRDTNL_SCRTSTN_ELDM/linked_BIRD_ABS_ELDM"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Asset_backed_security_has_Securitisation_non_correlation_trading_portfolio_non_CTP_Risk_Factor_for_standardised_approach_2wayassociation"
-        eType="#//BIRD_SCRTSTN_NN_CRRLTN_TRDNG_PRTFL_RSK_FCTR_FR_STNDRDSD_APPRCH_ELDM"
-        eOpposite="#//BIRD_SCRTSTN_NN_CRRLTN_TRDNG_PRTFL_RSK_FCTR_FR_STNDRDSD_APPRCH_ELDM/linked_BIRD_ABS_ELDM"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BIRD_ABS_ELDM_Table">
     <eStructuralFeatures xsi:type="ecore:EReference" name="BIRD_ABS_ELDMs" upperBound="-1"
@@ -8683,23 +8674,10 @@
     <eAnnotations source="long_name">
       <details key="long_name" value="Commodity_risk_factor_for_standardised_approach"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="DLVRY_LCTN" unique="false"
-        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString">
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Delivery_location"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="CMMDTY_TYP" unique="false"
-        eType="ecore:EEnum sdd_domains.ecore#//CMMDTY_TYP_FRTB_domain">
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Commodity_type"/>
-      </eAnnotations>
-    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BIRD_CMMDTY_RSK_FCTR_FR_STNDRDSD_APPRCH_ELDM_Table">
     <eStructuralFeatures xsi:type="ecore:EReference" name="BIRD_CMMDTY_RSK_FCTR_FR_STNDRDSD_APPRCH_ELDMs"
-        upperBound="-1" eType="#//BIRD_CMMDTY_RSK_FCTR_FR_STNDRDSD_APPRCH_ELDM" containment="true"
-        resolveProxies="false"/>
+        upperBound="-1" eType="#//BIRD_RSK_FAC_SA_ELDM" containment="true" resolveProxies="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BIRD_CMMRCL_RL_ESTT_CLLTRL_ELDM" eSuperTypes="#//BIRD_CMMRCL_RL_ESTT_OFFCS_CMMRCL_PRMSS_CLLTRL_ELDM">
     <eAnnotations source="long_name">
@@ -10052,49 +10030,10 @@
     <eAnnotations source="long_name">
       <details key="long_name" value="Credit_spread_risk_CSR_non_securitisation_risk_factor_for_standardised_approach"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ISSR_ID" unique="false"
-        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString">
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Issuer_identifier"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="CRDT_SPRD_RSK_CRDT_QLTY"
-        unique="false" eType="ecore:EEnum sdd_domains.ecore#//RTNG_GRD_CRDT_QLTY_domain">
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Credit_spread_risk_CSR_credit_quality"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="CRDT_SPRD_RSK_CRV_TYP"
-        unique="false" eType="ecore:EEnum sdd_domains.ecore#//CSR_CRV_TYP_domain">
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Credit_spread_risk_CSR_curve_type"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ISSR_RFRNC_DT" unique="false"
-        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EDate">
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Issuer_Reference_date"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ISSR_RPRTNG_AGNT_ID" unique="false"
-        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString">
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Issuer_Reporting_agent_identifier"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ISSR_RL_TYP" unique="false"
-        eType="ecore:EEnum sdd_domains.ecore#//ENTTY_RL_TYP_domain">
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Issuer_role_type"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="linked_BIRD_ISSR_ELDM"
-        lowerBound="1" eType="#//BIRD_ISSR_ELDM" eOpposite="#//BIRD_ISSR_ELDM/Issuer_has_Credit_spread_risk_CSR_non_securitisation_risk_factor_for_standardised_approach_2wayassociation"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BIRD_CRDT_SPRD_RSK_NN_SCRTSTN_RSK_FCTR_STNDRDSD_APPRCH_ELDM_Table">
     <eStructuralFeatures xsi:type="ecore:EReference" name="BIRD_CRDT_SPRD_RSK_NN_SCRTSTN_RSK_FCTR_STNDRDSD_APPRCH_ELDMs"
-        upperBound="-1" eType="#//BIRD_CRDT_SPRD_RSK_NN_SCRTSTN_RSK_FCTR_STNDRDSD_APPRCH_ELDM"
-        containment="true" resolveProxies="false"/>
+        upperBound="-1" eType="#//BIRD_RSK_FAC_SA_ELDM" containment="true" resolveProxies="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BIRD_CRDT_TRNSFR_OTHR_SCRTSTN_CVRD_BND_PRGRM_ELDM"
       eSuperTypes="#//BIRD_SCRTSN_OTHR_CRDT_TRNSFR_ELDM">
@@ -10197,39 +10136,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="BIRD_CRRNT_TX_LBLTY_ELDMs"
         upperBound="-1" eType="#//BIRD_CRRNT_TX_LBLTY_ELDM" containment="true" resolveProxies="false"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BIRD_CRVTR_ELDM" eSuperTypes="#//Risk_measure_type">
-    <eAnnotations source="long_name">
-      <details key="long_name" value="Curvature"/>
-    </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="CRVTR_RSK_WGHT" unique="false"
-        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble">
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Curvature_risk_weight"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="SHCK_DRCTN" unique="false"
-        eType="ecore:EEnum sdd_domains.ecore#//SHCK_DRCTN_domain">
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Shock_direction"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="CRVTR_VLTN_DFFRNC" unique="false"
-        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble">
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Curvature_valuation_difference"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="CRRNCY_RCRD" unique="false"
-        eType="ecore:EEnum sdd_domains.ecore#//CRRNCY_domain">
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Currency_of_record"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BIRD_CRVTR_ELDM_Table">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="BIRD_CRVTR_ELDMs" upperBound="-1"
-        eType="#//BIRD_CRVTR_ELDM" containment="true" resolveProxies="false"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BIRD_CRVTR_ELDM_Table" eSuperTypes="#//BIRD_SNSTVTY_ELDM_Table"/>
   <eClassifiers xsi:type="ecore:EClass" name="BIRD_CSH_HND_ELDM">
     <eAnnotations source="long_name">
       <details key="long_name" value="Cash_on_hand"/>
@@ -11194,32 +11101,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="BIRD_DFRRD_TX_LBLTY_ELDMs"
         upperBound="-1" eType="#//BIRD_DFRRD_TX_LBLTY_ELDM" containment="true" resolveProxies="false"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BIRD_DLT_SNSTVTY_ELDM" eSuperTypes="#//Risk_measure_type">
-    <eAnnotations source="long_name">
-      <details key="long_name" value="Delta_sensitivity"/>
-    </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="CRRNCY_RCRD" unique="false"
-        eType="ecore:EEnum sdd_domains.ecore#//CRRNCY_domain">
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Currency_of_record"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="DLT_SNSTVTY" unique="false"
-        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble">
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Delta_sensitivity"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="TNR" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble">
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Tenor"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BIRD_DLT_SNSTVTY_ELDM_Table">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="BIRD_DLT_SNSTVTY_ELDMs"
-        upperBound="-1" eType="#//BIRD_DLT_SNSTVTY_ELDM" containment="true" resolveProxies="false"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BIRD_DLT_SNSTVTY_ELDM_Table" eSuperTypes="#//BIRD_SNSTVTY_ELDM_Table"/>
   <eClassifiers xsi:type="ecore:EClass" name="BIRD_DPST_ELDM" eSuperTypes="#//BIRD_LN_EXCLDNG_RPRCHS_AGRMNT_ELDM">
     <eAnnotations source="long_name">
       <details key="long_name" value="Deposit"/>
@@ -11978,36 +11860,10 @@
     <eAnnotations source="long_name">
       <details key="long_name" value="Equity_risk_factor_for_standardised_approach"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="EQTY_SCRTY_RPRTNG_AGNT_ID"
-        unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString">
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Equity_Security_Reporting_agent_identifier"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="EQTY_SCRTY_ID" unique="false"
-        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString">
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Equity_Security_identifier"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="EQUTY_FCTR_TYP" unique="false"
-        eType="ecore:EEnum sdd_domains.ecore#//EQUTY_FCTR_TYP_domain">
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Equity_factor_type"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="EQTY_SCRTY_RFRNC_DT" unique="false"
-        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EDate">
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Equity_Security_Reference_date"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="linked_BIRD_EQTY_SCRTY_ELDM"
-        lowerBound="1" eType="#//BIRD_EQTY_SCRTY_ELDM" eOpposite="#//BIRD_EQTY_SCRTY_ELDM/Equity_security_has_Equity_risk_factor_for_standardised_approach_2wayassociation"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BIRD_EQTY_RSK_FCTR_ELDM_Table">
     <eStructuralFeatures xsi:type="ecore:EReference" name="BIRD_EQTY_RSK_FCTR_ELDMs"
-        upperBound="-1" eType="#//BIRD_EQTY_RSK_FCTR_ELDM" containment="true" resolveProxies="false"/>
+        upperBound="-1" eType="#//BIRD_RSK_FAC_SA_ELDM" containment="true" resolveProxies="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BIRD_EQTY_SCRTY_ELDM" eSuperTypes="#//BIRD_EQTY_FND_SCRTY_ELDM">
     <eAnnotations source="long_name">
@@ -12025,8 +11881,6 @@
         <details key="long_name" value="Total_amount_of_capital_issued"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Equity_security_has_Equity_risk_factor_for_standardised_approach_2wayassociation"
-        eType="#//BIRD_EQTY_RSK_FCTR_ELDM" eOpposite="#//BIRD_EQTY_RSK_FCTR_ELDM/linked_BIRD_EQTY_SCRTY_ELDM"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BIRD_EQTY_SCRTY_ELDM_Table">
     <eStructuralFeatures xsi:type="ecore:EReference" name="BIRD_EQTY_SCRTY_ELDMs"
@@ -12346,9 +12200,6 @@
         lowerBound="1" eType="#//BIRD_EXCHNG_TRDBL_DRVTV_ELDM" eOpposite="#//BIRD_EXCHNG_TRDBL_DRVTV_ELDM/Exchange_tradable_derivative_is_involved_in_Exchange_tradable_derivative_position_s__2wayassociation"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Exchange_tradable_derivative_position_acts_in_Exchange_tradable_derivative_position_role_2wayassociation"
         upperBound="-1" eType="#//BIRD_EXCHNG_TRDBL_DRVTV_POSTN_RL_ELDM" eOpposite="#//BIRD_EXCHNG_TRDBL_DRVTV_POSTN_RL_ELDM/linked_BIRD_EXCHNG_TRDBL_DRVTV_PSTN_ELDM"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Exchange_tradable_derivative_position_specifies_Fundamental_review_of_the_trading_book_standard_approach_risk_measure_for_ETD_positions_2wayassociation"
-        upperBound="-1" eType="#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ETD_PSTNS_ELDM"
-        eOpposite="#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ETD_PSTNS_ELDM/linked_BIRD_EXCHNG_TRDBL_DRVTV_PSTN_ELDM"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="linked_BIRD_SLLR_ELDM"
         lowerBound="1" eType="#//BIRD_SLLR_ELDM" eOpposite="#//BIRD_SLLR_ELDM/Seller_sells_Exchange_tradable_derivative_position_2wayassociation"/>
   </eClassifiers>
@@ -12508,247 +12359,84 @@
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="linked_BIRD_RSK_FAC_SA_ELDM"
         lowerBound="1" eType="#//BIRD_RSK_FAC_SA_ELDM" eOpposite="#//BIRD_RSK_FAC_SA_ELDM/Fundamental_review_of_the_trading_book_standard_approach_risk_measure_has_risk_measure_in_Risk_factor_for_standardised_approach_2wayassociation"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Risk_measure_type_delegate"
-        eType="#//Risk_measure_type" eOpposite="#//Risk_measure_type/parent_BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ELDM"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Risk_measure_type_by_position_delegate"
-        eType="#//Risk_measure_type_by_position" eOpposite="#//Risk_measure_type_by_position/parent_BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ELDM"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ELDM_uniqueID"
         unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
         iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="OPTN_MTRTY" unique="false"
+        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble">
+      <eAnnotations source="long_name">
+        <details key="long_name" value="Option_maturity"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="CRRNCY_RCRD" unique="false"
+        eType="ecore:EEnum sdd_domains.ecore#//CRRNCY_domain">
+      <eAnnotations source="long_name">
+        <details key="long_name" value="Currency_of_record"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="UNDRLYNG_RSDL_MTRTY" unique="false"
+        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble">
+      <eAnnotations source="long_name">
+        <details key="long_name" value="Underlying_residual_maturity"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="CRVTR_RSK_WGHT" unique="false"
+        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble">
+      <eAnnotations source="long_name">
+        <details key="long_name" value="Curvature_risk_weight"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="SHCK_DRCTN" unique="false"
+        eType="ecore:EEnum sdd_domains.ecore#//SHCK_DRCTN_domain">
+      <eAnnotations source="long_name">
+        <details key="long_name" value="Shock_direction"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="TNR" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble">
+      <eAnnotations source="long_name">
+        <details key="long_name" value="Tenor"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="DLT_SNSTVTY" unique="false"
+        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble">
+      <eAnnotations source="long_name">
+        <details key="long_name" value="Delta_sensitivity"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="CRVTR_VLTN_DFFRNC" unique="false"
+        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble">
+      <eAnnotations source="long_name">
+        <details key="long_name" value="Curvature_valuation_difference"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="VG_SNSTVTY" unique="false"
+        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble">
+      <eAnnotations source="long_name">
+        <details key="long_name" value="Vega_sensitivity"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Risk_measure_type_discriminator"
+        lowerBound="1" eType="#//Risk_measure_type_domain"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linked_BIRD_EXCHNG_TRDBL_DRVTV_PSTN_ELDM"
+        lowerBound="1" eType="#//BIRD_EXCHNG_TRDBL_DRVTV_PSTN_ELDM"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linked_BIRD_SCRTY_PSTN_ELDM"
+        lowerBound="1" eType="#//BIRD_SCRTY_PSTN_ELDM"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linked_BIRD_OTC_DRVTV_INSTRMNT_ELDM"
+        lowerBound="1" eType="#//BIRD_OTC_DRVTV_INSTRMNT_ELDM"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Risk_measure_type_by_position_discriminator"
+        lowerBound="1" eType="#//Risk_measure_type_by_position_domain"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ELDM_Table">
     <eStructuralFeatures xsi:type="ecore:EReference" name="BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ELDMs"
         upperBound="-1" eType="#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ELDM"
         containment="true" resolveProxies="false"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ETD_PSTNS_ELDM"
-      eSuperTypes="#//Risk_measure_type_by_position">
-    <eAnnotations source="long_name">
-      <details key="long_name" value="Fundamental_review_of_the_trading_book_standard_approach_risk_measure_for_ETD_positions"/>
-    </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="BYR_PRTY_RFRNC_DT" unique="false"
-        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EDate">
-      <eAnnotations source="key">
-        <details key="is_primary_key" value="true"/>
-      </eAnnotations>
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Buyer_Party_Reference_date"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="SLLR_PRTY_RL_TYP" unique="false"
-        eType="ecore:EEnum sdd_domains.ecore#//ENTTY_RL_TYP_domain">
-      <eAnnotations source="key">
-        <details key="is_primary_key" value="true"/>
-      </eAnnotations>
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Seller_Party_role_type"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="SLLR_PRTY_RFRNC_DT" unique="false"
-        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EDate">
-      <eAnnotations source="key">
-        <details key="is_primary_key" value="true"/>
-      </eAnnotations>
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Seller_Party_Reference_date"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="BYR_PRTY_ID" unique="false"
-        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString">
-      <eAnnotations source="key">
-        <details key="is_primary_key" value="true"/>
-      </eAnnotations>
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Buyer_Party_identifier"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="EXCHNG_TRDBL_DRVTV_SCRTY_RFRNC_DT"
-        unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EDate">
-      <eAnnotations source="key">
-        <details key="is_primary_key" value="true"/>
-      </eAnnotations>
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Exchange_tradable_derivative_Security_Reference_date"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="EXCHNG_TRDBL_DRVTV_SCRTY_RPRTNG_AGNT_ID"
-        unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString">
-      <eAnnotations source="key">
-        <details key="is_primary_key" value="true"/>
-      </eAnnotations>
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Exchange_tradable_derivative_Security_Reporting_agent_identifier"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="BYR_PRTY_RPRTNG_AGNT_ID"
-        unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString">
-      <eAnnotations source="key">
-        <details key="is_primary_key" value="true"/>
-      </eAnnotations>
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Buyer_Party_Reporting_agent_identifier"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="SLLR_PRTY_RPRTNG_AGNT_ID"
-        unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString">
-      <eAnnotations source="key">
-        <details key="is_primary_key" value="true"/>
-      </eAnnotations>
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Seller_Party_Reporting_agent_identifier"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="EXCHNG_TRDBL_DRVTV_SCRTY_ID"
-        unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString">
-      <eAnnotations source="key">
-        <details key="is_primary_key" value="true"/>
-      </eAnnotations>
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Exchange_tradable_derivative_Security_identifier"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="BYR_PRTY_RL_TYP" unique="false"
-        eType="ecore:EEnum sdd_domains.ecore#//ENTTY_RL_TYP_domain">
-      <eAnnotations source="key">
-        <details key="is_primary_key" value="true"/>
-      </eAnnotations>
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Buyer_Party_role_type"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="SLLR_PRTY_ID" unique="false"
-        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString">
-      <eAnnotations source="key">
-        <details key="is_primary_key" value="true"/>
-      </eAnnotations>
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Seller_Party_identifier"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="linked_BIRD_EXCHNG_TRDBL_DRVTV_PSTN_ELDM"
-        lowerBound="1" eType="#//BIRD_EXCHNG_TRDBL_DRVTV_PSTN_ELDM" eOpposite="#//BIRD_EXCHNG_TRDBL_DRVTV_PSTN_ELDM/Exchange_tradable_derivative_position_specifies_Fundamental_review_of_the_trading_book_standard_approach_risk_measure_for_ETD_positions_2wayassociation"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ETD_PSTNS_ELDM_Table">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ETD_PSTNS_ELDMs"
-        upperBound="-1" eType="#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ETD_PSTNS_ELDM"
-        containment="true" resolveProxies="false"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_FR_SCRTY_PSTNS_ELDM"
-      eSuperTypes="#//Risk_measure_type_by_position">
-    <eAnnotations source="long_name">
-      <details key="long_name" value="Fundamental_review_of_the_trading_book_standard_approach_risk_measure_for_security_positions"/>
-    </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="SCRTY_RPRTNG_AGNT_ID" unique="false"
-        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString">
-      <eAnnotations source="key">
-        <details key="is_primary_key" value="true"/>
-      </eAnnotations>
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Security_Reporting_agent_identifier"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="SCRTY_RFRNC_DT" unique="false"
-        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EDate">
-      <eAnnotations source="key">
-        <details key="is_primary_key" value="true"/>
-      </eAnnotations>
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Security_Reference_date"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="INVSTR_PRTY_RPRTNG_AGNT_ID"
-        unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString">
-      <eAnnotations source="key">
-        <details key="is_primary_key" value="true"/>
-      </eAnnotations>
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Investor_Party_Reporting_agent_identifier"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="INVSTR_PRTY_RL_TYP" unique="false"
-        eType="ecore:EEnum sdd_domains.ecore#//ENTTY_RL_TYP_domain">
-      <eAnnotations source="key">
-        <details key="is_primary_key" value="true"/>
-      </eAnnotations>
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Investor_Party_role_type"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="INVSTR_PRTY_ID" unique="false"
-        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString">
-      <eAnnotations source="key">
-        <details key="is_primary_key" value="true"/>
-      </eAnnotations>
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Investor_Party_identifier"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="INVSTR_PRTY_RFRNC_DT" unique="false"
-        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EDate">
-      <eAnnotations source="key">
-        <details key="is_primary_key" value="true"/>
-      </eAnnotations>
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Investor_Party_Reference_date"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="SCRTY_ID" unique="false"
-        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString">
-      <eAnnotations source="key">
-        <details key="is_primary_key" value="true"/>
-      </eAnnotations>
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Security_identifier"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="linked_BIRD_SCRTY_PSTN_ELDM"
-        lowerBound="1" eType="#//BIRD_SCRTY_PSTN_ELDM" eOpposite="#//BIRD_SCRTY_PSTN_ELDM/Security_position_specifies_Fundamental_review_of_the_trading_book_standard_approach_risk_measure_for_security_positions_2wayassociation"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_FR_SCRTY_PSTNS_ELDM_Table">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_FR_SCRTY_PSTNS_ELDMs"
-        upperBound="-1" eType="#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_FR_SCRTY_PSTNS_ELDM"
-        containment="true" resolveProxies="false"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_OTC_PSTNS_ELDM"
-      eSuperTypes="#//Risk_measure_type_by_position">
-    <eAnnotations source="long_name">
-      <details key="long_name" value="Fundamental_review_of_the_trading_book_standard_approach_risk_measure_for_OTC_positions"/>
-    </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="INSTRMNT_RPRTNG_AGNT_ID"
-        unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString">
-      <eAnnotations source="key">
-        <details key="is_primary_key" value="true"/>
-      </eAnnotations>
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Instrument_Reporting_agent_identifier"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="INSTRMNT_RFRNC_DT" unique="false"
-        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EDate">
-      <eAnnotations source="key">
-        <details key="is_primary_key" value="true"/>
-      </eAnnotations>
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Instrument_Reference_date"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="INSTRMNT_ID" unique="false"
-        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString">
-      <eAnnotations source="key">
-        <details key="is_primary_key" value="true"/>
-      </eAnnotations>
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Instrument_identifier"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="linked_BIRD_OTC_DRVTV_INSTRMNT_ELDM"
-        lowerBound="1" eType="#//BIRD_OTC_DRVTV_INSTRMNT_ELDM" eOpposite="#//BIRD_OTC_DRVTV_INSTRMNT_ELDM/Over_the_counter_OTC_Derivative_instrument_specifies_Fundamental_review_of_the_trading_book_standard_approach_risk_measure_for_OTC_positions_2wayassociation"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_OTC_PSTNS_ELDM_Table">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_OTC_PSTNS_ELDMs"
-        upperBound="-1" eType="#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_OTC_PSTNS_ELDM"
-        containment="true" resolveProxies="false"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ETD_PSTNS_ELDM_Table"
+      eSuperTypes="#//BIRD_FNDMNTL_RVW_TRDNG_BL_STNDRD_APPRCH_RSK_MSR_SUPER_ELDM_Table"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_FR_SCRTY_PSTNS_ELDM_Table"
+      eSuperTypes="#//BIRD_FNDMNTL_RVW_TRDNG_BL_STNDRD_APPRCH_RSK_MSR_SUPER_ELDM_Table"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_OTC_PSTNS_ELDM_Table"
+      eSuperTypes="#//BIRD_FNDMNTL_RVW_TRDNG_BL_STNDRD_APPRCH_RSK_MSR_SUPER_ELDM_Table"/>
   <eClassifiers xsi:type="ecore:EClass" name="BIRD_FNDS_GNRL_BNKNG_RSK_ELDM" eSuperTypes="#//BIRD_PRVSN_ELDM">
     <eAnnotations source="long_name">
       <details key="long_name" value="Funds_for_general_banking_risk"/>
@@ -14033,22 +13721,10 @@
     <eAnnotations source="long_name">
       <details key="long_name" value="Foreign_exchange_risk_factor_for_standardised_approach"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="BS_CRRNCY" unique="false"
-        eType="ecore:EEnum sdd_domains.ecore#//CRRNCY_domain">
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Base_currency"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="CRRNCY" unique="false"
-        eType="ecore:EEnum sdd_domains.ecore#//CRRNCY_domain">
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Currency"/>
-      </eAnnotations>
-    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BIRD_FX_RSK_FACTR_SA_ELDM_Table">
     <eStructuralFeatures xsi:type="ecore:EReference" name="BIRD_FX_RSK_FACTR_SA_ELDMs"
-        upperBound="-1" eType="#//BIRD_FX_RSK_FACTR_SA_ELDM" containment="true" resolveProxies="false"/>
+        upperBound="-1" eType="#//BIRD_RSK_FAC_SA_ELDM" containment="true" resolveProxies="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BIRD_FXD_INTRST_FNNCL_ASST_INSTRMNT_ELDM"
       eSuperTypes="#//Financial_asset_instrument_type_by_fixed_interest_rate">
@@ -14137,28 +13813,10 @@
     <eAnnotations source="long_name">
       <details key="long_name" value="General_interest_rate_risk_GIRR_factor_for_standardised_approach"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="GIRR_FCTR_TYP" unique="false"
-        eType="ecore:EEnum sdd_domains.ecore#//GIRR_RSK_FCTR_domain">
-      <eAnnotations source="long_name">
-        <details key="long_name" value="General_interest_rate_risk_GIRR_factor_type"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="MN_CRRNCY" unique="false"
-        eType="ecore:EEnum sdd_domains.ecore#//CRRNCY_domain">
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Main_currency"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="SCND_CRRNCY" unique="false"
-        eType="ecore:EEnum sdd_domains.ecore#//CRRNCY_domain">
-      <eAnnotations source="long_name">
-        <details key="long_name" value="Second_currency"/>
-      </eAnnotations>
-    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BIRD_GIRR_RSK_FCTR_ELDM_Table">
     <eStructuralFeatures xsi:type="ecore:EReference" name="BIRD_GIRR_RSK_FCTR_ELDMs"
-        upperBound="-1" eType="#//BIRD_GIRR_RSK_FCTR_ELDM" containment="true" resolveProxies="false"/>
+        upperBound="-1" eType="#//BIRD_RSK_FAC_SA_ELDM" containment="true" resolveProxies="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BIRD_GLD_CLLTRL_ELDM" eSuperTypes="#//BIRD_CMMDTY_CLLTRL_ELDM">
     <eAnnotations source="long_name">
@@ -15366,9 +15024,6 @@
     <eAnnotations source="long_name">
       <details key="long_name" value="Issuer"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Issuer_has_Credit_spread_risk_CSR_non_securitisation_risk_factor_for_standardised_approach_2wayassociation"
-        upperBound="-1" eType="#//BIRD_CRDT_SPRD_RSK_NN_SCRTSTN_RSK_FCTR_STNDRDSD_APPRCH_ELDM"
-        eOpposite="#//BIRD_CRDT_SPRD_RSK_NN_SCRTSTN_RSK_FCTR_STNDRDSD_APPRCH_ELDM/linked_BIRD_ISSR_ELDM"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Issuer_issues_Equity_instrument_that_is_not_a_security_via_Equity_instrument_that_is_not_a_security_Issuer_assignment_2wayassociation"
         upperBound="-1" eType="#//BIRD_EQTY_INSTRMNT_NT_SCRTY_ISSR_ASSGNMNT_ELDM"
         eOpposite="#//BIRD_EQTY_INSTRMNT_NT_SCRTY_ISSR_ASSGNMNT_ELDM/linked_BIRD_ISSR_ELDM"/>
@@ -23997,10 +23652,7 @@
         upperBound="-1" eType="#//Past_due_financial_asset_instrument_indicator" containment="true"
         resolveProxies="false"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Risk_measure_type" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parent_BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ELDM"
-        lowerBound="1" eType="#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ELDM"
-        eOpposite="#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ELDM/Risk_measure_type_delegate"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Risk_measure_type">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Risk_measure_type_uniqueID"
         unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
         iD="true"/>
@@ -24009,19 +23661,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="Risk_measure_types" upperBound="-1"
         eType="#//Risk_measure_type" containment="true" resolveProxies="false"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Risk_measure_type_by_position" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parent_BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ELDM"
-        lowerBound="1" eType="#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ELDM"
-        eOpposite="#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ELDM/Risk_measure_type_by_position_delegate"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Risk_measure_type_by_position_uniqueID"
-        unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
-        iD="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Risk_measure_type_by_position_Table">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Risk_measure_type_by_positions"
-        upperBound="-1" eType="#//Risk_measure_type_by_position" containment="true"
-        resolveProxies="false"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Risk_measure_type_by_position"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Risk_measure_type_by_position_Table"/>
   <eClassifiers xsi:type="ecore:EClass" name="Instrument_type_by_origin" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent_BIRD_INSTRMNT_ELDM"
         lowerBound="1" eType="#//BIRD_INSTRMNT_ELDM" eOpposite="#//BIRD_INSTRMNT_ELDM/Instrument_type_by_origin_delegate"/>
@@ -24287,5 +23928,20 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="Security_borrowing_and_lending_transaction_component_type_by_directions"
         upperBound="-1" eType="#//Security_borrowing_and_lending_transaction_component_type_by_direction"
         containment="true" resolveProxies="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Risk_measure_type_domain">
+    <eLiterals name="BIRD_VG_SNSTVTY_ELDM"/>
+    <eLiterals name="BIRD_CRVTR_ELDM" value="1"/>
+    <eLiterals name="BIRD_DLT_SNSTVTY_ELDM" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BIRD_SNSTVTY_ELDM_Table"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BIRD_FNDMNTL_RVW_TRDNG_BL_STNDRD_APPRCH_RSK_MSR_SUPER_ELDM_Table"
+      abstract="true"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="Risk_measure_type_by_position_domain">
+    <eLiterals name="BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ETD_PSTNS_ELDM"/>
+    <eLiterals name="BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_FR_SCRTY_PSTNS_ELDM"
+        value="1"/>
+    <eLiterals name="BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_OTC_PSTNS_ELDM"
+        value="2"/>
   </eClassifiers>
 </ecore:EPackage>
