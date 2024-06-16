@@ -4777,6 +4777,8 @@
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="linked_BIRD_ABS_ELDM" lowerBound="1"
         eType="#//BIRD_ABS_ELDM"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="BIRD_RSK_FAC_SA_discriminator"
+        lowerBound="1" eType="#//BIRD_RSK_FAC_SA_domain"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BIRD_RSK_FAC_SA_ELDM_Table">
     <eStructuralFeatures xsi:type="ecore:EReference" name="BIRD_RSK_FAC_SA_ELDMs"
@@ -5777,26 +5779,10 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="BIRD_SCRTSTN_ELDMs" upperBound="-1"
         eType="#//BIRD_SCRTSTN_ELDM" containment="true" resolveProxies="false"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BIRD_SCRTSTN_CRRLTN_TRDNG_PRTFL_RSK_FCTR_STNDRDSD_APPRCH_ELDM"
-      eSuperTypes="#//BIRD_RSK_FAC_SA_ELDM">
-    <eAnnotations source="long_name">
-      <details key="long_name" value="Securitisation_correlation_trading_portfolio_CTP_Risk_Factor_for_standardised_approach"/>
-    </eAnnotations>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BIRD_SCRTSTN_CRRLTN_TRDNG_PRTFL_RSK_FCTR_STNDRDSD_APPRCH_ELDM_Table">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="BIRD_SCRTSTN_CRRLTN_TRDNG_PRTFL_RSK_FCTR_STNDRDSD_APPRCH_ELDMs"
-        upperBound="-1" eType="#//BIRD_RSK_FAC_SA_ELDM" containment="true" resolveProxies="false"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BIRD_SCRTSTN_NN_CRRLTN_TRDNG_PRTFL_RSK_FCTR_FR_STNDRDSD_APPRCH_ELDM"
-      eSuperTypes="#//BIRD_RSK_FAC_SA_ELDM">
-    <eAnnotations source="long_name">
-      <details key="long_name" value="Securitisation_non_correlation_trading_portfolio_non_CTP_Risk_Factor_for_standardised_approach"/>
-    </eAnnotations>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BIRD_SCRTSTN_NN_CRRLTN_TRDNG_PRTFL_RSK_FCTR_FR_STNDRDSD_APPRCH_ELDM_Table">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="BIRD_SCRTSTN_NN_CRRLTN_TRDNG_PRTFL_RSK_FCTR_FR_STNDRDSD_APPRCH_ELDMs"
-        upperBound="-1" eType="#//BIRD_RSK_FAC_SA_ELDM" containment="true" resolveProxies="false"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BIRD_SCRTSTN_CRRLTN_TRDNG_PRTFL_RSK_FCTR_STNDRDSD_APPRCH_ELDM_Table"
+      eSuperTypes="#//BIRD_RSK_FCTR_STNDRDSD_APPRCH_ALL_Table"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BIRD_SCRTSTN_NN_CRRLTN_TRDNG_PRTFL_RSK_FCTR_FR_STNDRDSD_APPRCH_ELDM_Table"
+      eSuperTypes="#//BIRD_RSK_FCTR_STNDRDSD_APPRCH_ALL_Table"/>
   <eClassifiers xsi:type="ecore:EClass" name="BIRD_SCRTSTN_TRNCH_ELDM">
     <eAnnotations source="long_name">
       <details key="long_name" value="Securitisation_tranche"/>
@@ -8669,16 +8655,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="BIRD_CMMDTY_CLLTRL_ELDMs"
         upperBound="-1" eType="#//BIRD_CMMDTY_CLLTRL_ELDM" containment="true" resolveProxies="false"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BIRD_CMMDTY_RSK_FCTR_FR_STNDRDSD_APPRCH_ELDM"
-      eSuperTypes="#//BIRD_RSK_FAC_SA_ELDM">
-    <eAnnotations source="long_name">
-      <details key="long_name" value="Commodity_risk_factor_for_standardised_approach"/>
-    </eAnnotations>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BIRD_CMMDTY_RSK_FCTR_FR_STNDRDSD_APPRCH_ELDM_Table">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="BIRD_CMMDTY_RSK_FCTR_FR_STNDRDSD_APPRCH_ELDMs"
-        upperBound="-1" eType="#//BIRD_RSK_FAC_SA_ELDM" containment="true" resolveProxies="false"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BIRD_CMMDTY_RSK_FCTR_FR_STNDRDSD_APPRCH_ELDM_Table"
+      eSuperTypes="#//BIRD_RSK_FCTR_STNDRDSD_APPRCH_ALL_Table"/>
   <eClassifiers xsi:type="ecore:EClass" name="BIRD_CMMRCL_RL_ESTT_CLLTRL_ELDM" eSuperTypes="#//BIRD_CMMRCL_RL_ESTT_OFFCS_CMMRCL_PRMSS_CLLTRL_ELDM">
     <eAnnotations source="long_name">
       <details key="long_name" value="Commercial_real_estate_collateral"/>
@@ -10025,16 +10003,8 @@
         upperBound="-1" eType="#//BIRD_CRDT_RSK_MTGTN_ASSGNMNT_ELDM" containment="true"
         resolveProxies="false"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BIRD_CRDT_SPRD_RSK_NN_SCRTSTN_RSK_FCTR_STNDRDSD_APPRCH_ELDM"
-      eSuperTypes="#//BIRD_RSK_FAC_SA_ELDM">
-    <eAnnotations source="long_name">
-      <details key="long_name" value="Credit_spread_risk_CSR_non_securitisation_risk_factor_for_standardised_approach"/>
-    </eAnnotations>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BIRD_CRDT_SPRD_RSK_NN_SCRTSTN_RSK_FCTR_STNDRDSD_APPRCH_ELDM_Table">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="BIRD_CRDT_SPRD_RSK_NN_SCRTSTN_RSK_FCTR_STNDRDSD_APPRCH_ELDMs"
-        upperBound="-1" eType="#//BIRD_RSK_FAC_SA_ELDM" containment="true" resolveProxies="false"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BIRD_CRDT_SPRD_RSK_NN_SCRTSTN_RSK_FCTR_STNDRDSD_APPRCH_ELDM_Table"
+      eSuperTypes="#//BIRD_RSK_FCTR_STNDRDSD_APPRCH_ALL_Table"/>
   <eClassifiers xsi:type="ecore:EClass" name="BIRD_CRDT_TRNSFR_OTHR_SCRTSTN_CVRD_BND_PRGRM_ELDM"
       eSuperTypes="#//BIRD_SCRTSN_OTHR_CRDT_TRNSFR_ELDM">
     <eAnnotations source="long_name">
@@ -11856,15 +11826,7 @@
         upperBound="-1" eType="#//BIRD_EQTY_INSTRMNT_NT_SCRTY_ISSR_ASSGNMNT_ELDM"
         containment="true" resolveProxies="false"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BIRD_EQTY_RSK_FCTR_ELDM" eSuperTypes="#//BIRD_RSK_FAC_SA_ELDM">
-    <eAnnotations source="long_name">
-      <details key="long_name" value="Equity_risk_factor_for_standardised_approach"/>
-    </eAnnotations>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BIRD_EQTY_RSK_FCTR_ELDM_Table">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="BIRD_EQTY_RSK_FCTR_ELDMs"
-        upperBound="-1" eType="#//BIRD_RSK_FAC_SA_ELDM" containment="true" resolveProxies="false"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BIRD_EQTY_RSK_FCTR_ELDM_Table" eSuperTypes="#//BIRD_RSK_FCTR_STNDRDSD_APPRCH_ALL_Table"/>
   <eClassifiers xsi:type="ecore:EClass" name="BIRD_EQTY_SCRTY_ELDM" eSuperTypes="#//BIRD_EQTY_FND_SCRTY_ELDM">
     <eAnnotations source="long_name">
       <details key="long_name" value="Equity_security"/>
@@ -13717,15 +13679,7 @@
         upperBound="-1" eType="#//BIRD_FV_EXCHNG_TRDBL_DRVTV_LBLTY_PSTN_ELDM" containment="true"
         resolveProxies="false"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BIRD_FX_RSK_FACTR_SA_ELDM" eSuperTypes="#//BIRD_RSK_FAC_SA_ELDM">
-    <eAnnotations source="long_name">
-      <details key="long_name" value="Foreign_exchange_risk_factor_for_standardised_approach"/>
-    </eAnnotations>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BIRD_FX_RSK_FACTR_SA_ELDM_Table">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="BIRD_FX_RSK_FACTR_SA_ELDMs"
-        upperBound="-1" eType="#//BIRD_RSK_FAC_SA_ELDM" containment="true" resolveProxies="false"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BIRD_FX_RSK_FACTR_SA_ELDM_Table" eSuperTypes="#//BIRD_RSK_FCTR_STNDRDSD_APPRCH_ALL_Table"/>
   <eClassifiers xsi:type="ecore:EClass" name="BIRD_FXD_INTRST_FNNCL_ASST_INSTRMNT_ELDM"
       eSuperTypes="#//Financial_asset_instrument_type_by_fixed_interest_rate">
     <eAnnotations source="long_name">
@@ -13809,15 +13763,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="BIRD_GDWLL_ELDMs" upperBound="-1"
         eType="#//BIRD_GDWLL_ELDM" containment="true" resolveProxies="false"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BIRD_GIRR_RSK_FCTR_ELDM" eSuperTypes="#//BIRD_RSK_FAC_SA_ELDM">
-    <eAnnotations source="long_name">
-      <details key="long_name" value="General_interest_rate_risk_GIRR_factor_for_standardised_approach"/>
-    </eAnnotations>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BIRD_GIRR_RSK_FCTR_ELDM_Table">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="BIRD_GIRR_RSK_FCTR_ELDMs"
-        upperBound="-1" eType="#//BIRD_RSK_FAC_SA_ELDM" containment="true" resolveProxies="false"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BIRD_GIRR_RSK_FCTR_ELDM_Table" eSuperTypes="#//BIRD_RSK_FCTR_STNDRDSD_APPRCH_ALL_Table"/>
   <eClassifiers xsi:type="ecore:EClass" name="BIRD_GLD_CLLTRL_ELDM" eSuperTypes="#//BIRD_CMMDTY_CLLTRL_ELDM">
     <eAnnotations source="long_name">
       <details key="long_name" value="Gold_collateral"/>
@@ -23943,5 +23889,21 @@
         value="1"/>
     <eLiterals name="BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_OTC_PSTNS_ELDM"
         value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="BIRD_RSK_FAC_SA_domain">
+    <eLiterals name="BIRD_SCRTSTN_CRRLTN_TRDNG_PRTFL_RSK_FCTR_STNDRDSD_APPRCH_ELDM"/>
+    <eLiterals name="BIRD_SCRTSTN_NN_CRRLTN_TRDNG_PRTFL_RSK_FCTR_FR_STNDRDSD_APPRCH_ELDM"
+        value="1"/>
+    <eLiterals name="BIRD_CMMDTY_RSK_FCTR_FR_STNDRDSD_APPRCH_ELDM" value="2"/>
+    <eLiterals name="BIRD_CRDT_SPRD_RSK_NN_SCRTSTN_RSK_FCTR_STNDRDSD_APPRCH_ELDM"
+        value="3"/>
+    <eLiterals name="BIRD_EQTY_RSK_FCTR_ELDM" value="4"/>
+    <eLiterals name="BIRD_FX_RSK_FACTR_SA_ELDM" value="5"/>
+    <eLiterals name="BIRD_GIRR_RSK_FCTR_ELDM" value="6"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BIRD_RSK_FCTR_STNDRDSD_APPRCH_ALL_Table"
+      abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="BIRD_RSK_FCTR_STNDRDSD_APPRCH_ELDMs"
+        upperBound="-1" eType="#//BIRD_RSK_FAC_SA_ELDM" containment="true" resolveProxies="false"/>
   </eClassifiers>
 </ecore:EPackage>
