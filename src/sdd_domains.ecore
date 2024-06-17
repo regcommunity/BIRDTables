@@ -16103,4 +16103,9 @@
         value="3" literal="2"/>
     <eLiterals name="All_type_of_staff_Total_" value="4" literal="-1"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Risk_measure_type_domain">
+    <eLiterals name="BIRD_VG_SNSTVTY_ELDM"/>
+    <eLiterals name="BIRD_CRVTR_ELDM" value="1"/>
+    <eLiterals name="BIRD_DLT_SNSTVTY_ELDM" value="2"/>
+  </eClassifiers>
 </ecore:EPackage>
