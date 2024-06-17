@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<input_tables:BIRD_ENTTY_RL_ELDM_Table xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:input_tables="input_tables">
+  <BIRD_ENTTY_RL_ELDMs BIRD_ENTTY_RL_ELDM_uniqueID="invester1">
+    <Entity_role_type_delegate xsi:type="input_tables:BIRD_INVSTR_ELDM" href="BIRD_INVSTR_ELDM_Table.xmi.backup#invester1"/>
+  </BIRD_ENTTY_RL_ELDMs>
+  <BIRD_ENTTY_RL_ELDMs BIRD_ENTTY_RL_ELDM_uniqueID="issuer1">
+    <Entity_role_type_delegate xsi:type="input_tables:BIRD_ISSR_ELDM" href="BIRD_ISSR_ELDM_Table.xmi.backup#issuer1"/>
+  </BIRD_ENTTY_RL_ELDMs>
+</input_tables:BIRD_ENTTY_RL_ELDM_Table>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<input_tables:BIRD_PRTY_ELDM_Table xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:input_tables="input_tables">
+  <BIRD_PRTY_ELDMs PRTY_ID="party1" BIRD_PRTY_ELDM_uniqueID="party1">
+    <Party_has_Party_derived_data_2wayassociation href="BIRD_PRTY_DRVD_DT_ELDM_Table.xmi.backup#party1"/>
+    <Party_acts_in_Party_role_2wayassociation href="BIRD_INVSTR_ELDM_Table.xmi.backup#invester1"/>
+    <Party_acts_in_Party_role_2wayassociation href="BIRD_ISSR_ELDM_Table.xmi.backup#issuer1"/>
+  </BIRD_PRTY_ELDMs>
+</input_tables:BIRD_PRTY_ELDM_Table>
