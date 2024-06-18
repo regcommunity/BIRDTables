@@ -6,6 +6,20 @@
   <foreignModel>input_tables.ecore</foreignModel>
   <genPackages prefix="Input_tables" disposableProviderFactory="true" loadInitialization="true"
       literalsInterface="false" ecorePackage="input_tables.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="input_tables.ecore#//Risk_measure_type_by_position_domain">
+      <genEnumLiterals ecoreEnumLiteral="input_tables.ecore#//Risk_measure_type_by_position_domain/BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ETD_PSTNS_ELDM"/>
+      <genEnumLiterals ecoreEnumLiteral="input_tables.ecore#//Risk_measure_type_by_position_domain/BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_FR_SCRTY_PSTNS_ELDM"/>
+      <genEnumLiterals ecoreEnumLiteral="input_tables.ecore#//Risk_measure_type_by_position_domain/BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_OTC_PSTNS_ELDM"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="input_tables.ecore#//BIRD_RSK_FAC_SA_ELDM_domain">
+      <genEnumLiterals ecoreEnumLiteral="input_tables.ecore#//BIRD_RSK_FAC_SA_ELDM_domain/BIRD_SCRTSTN_CRRLTN_TRDNG_PRTFL_RSK_FCTR_STNDRDSD_APPRCH_ELDM"/>
+      <genEnumLiterals ecoreEnumLiteral="input_tables.ecore#//BIRD_RSK_FAC_SA_ELDM_domain/BIRD_SCRTSTN_NN_CRRLTN_TRDNG_PRTFL_RSK_FCTR_FR_STNDRDSD_APPRCH_ELDM"/>
+      <genEnumLiterals ecoreEnumLiteral="input_tables.ecore#//BIRD_RSK_FAC_SA_ELDM_domain/BIRD_CMMDTY_RSK_FCTR_FR_STNDRDSD_APPRCH_ELDM"/>
+      <genEnumLiterals ecoreEnumLiteral="input_tables.ecore#//BIRD_RSK_FAC_SA_ELDM_domain/BIRD_CRDT_SPRD_RSK_NN_SCRTSTN_RSK_FCTR_STNDRDSD_APPRCH_ELDM"/>
+      <genEnumLiterals ecoreEnumLiteral="input_tables.ecore#//BIRD_RSK_FAC_SA_ELDM_domain/BIRD_EQTY_RSK_FCTR_ELDM"/>
+      <genEnumLiterals ecoreEnumLiteral="input_tables.ecore#//BIRD_RSK_FAC_SA_ELDM_domain/BIRD_FX_RSK_FACTR_SA_ELDM"/>
+      <genEnumLiterals ecoreEnumLiteral="input_tables.ecore#//BIRD_RSK_FAC_SA_ELDM_domain/BIRD_GIRR_RSK_FCTR_ELDM"/>
+    </genEnums>
     <genClasses ecoreClass="input_tables.ecore#//BIRD_SYNDCTD_CNTRCT_ELDM">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_SYNDCTD_CNTRCT_ELDM/SYNDCTD_CNTRCT_ID"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_SYNDCTD_CNTRCT_ELDM/Syndicated_contract_contains_Syndicated_financial_contract_member_s__2wayassociation"/>
@@ -185,15 +199,7 @@
     <genClasses ecoreClass="input_tables.ecore#//BIRD_UPU_SYSTM_PRTY_ELDM_Table">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_UPU_SYSTM_PRTY_ELDM_Table/BIRD_UPU_SYSTM_PRTY_ELDMs"/>
     </genClasses>
-    <genClasses ecoreClass="input_tables.ecore#//BIRD_VG_SNSTVTY_ELDM">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_VG_SNSTVTY_ELDM/UNDRLYNG_RSDL_MTRTY"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_VG_SNSTVTY_ELDM/VG_SNSTVTY"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_VG_SNSTVTY_ELDM/CRRNCY_RCRD"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_VG_SNSTVTY_ELDM/OPTN_MTRTY"/>
-    </genClasses>
-    <genClasses ecoreClass="input_tables.ecore#//BIRD_VG_SNSTVTY_ELDM_Table">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_VG_SNSTVTY_ELDM_Table/BIRD_VG_SNSTVTY_ELDMs"/>
-    </genClasses>
+    <genClasses ecoreClass="input_tables.ecore#//BIRD_VG_SNSTVTY_ELDM_Table"/>
     <genClasses ecoreClass="input_tables.ecore#//BIRD_NTRL_PRSN_ELDM">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_NTRL_PRSN_ELDM/NTRL_PRSN_TYP"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_NTRL_PRSN_ELDM/FRST_NM"/>
@@ -415,7 +421,6 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_OTC_DRVTV_INSTRMNT_ELDM/Over_the_counter_OTC_Derivative_instrument_comprises_Tranche_in_a_synthetic_securitisation_without_securitisation_special_purpose_entity_SSPE_being_a_financial_guarantee_via_Over_the_counter_OTC_Derivative_instrument_Synthetic_securitisation_assignment_2wayassociation"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_OTC_DRVTV_INSTRMNT_ELDM/Over_the_counter_OTC_Derivative_instrument_has_Buyer_via_Over_the_counter_OTC_Derivative_Buyer_assignment_2wayassociation"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_OTC_DRVTV_INSTRMNT_ELDM/Over_the_counter_OTC_Derivative_instrument_has_Seller_via_Over_the_counter_OTC_Derivative_Seller_assignment_2wayassociation"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_OTC_DRVTV_INSTRMNT_ELDM/Over_the_counter_OTC_Derivative_instrument_specifies_Fundamental_review_of_the_trading_book_standard_approach_risk_measure_for_OTC_positions_2wayassociation"/>
     </genClasses>
     <genClasses ecoreClass="input_tables.ecore#//BIRD_OTC_DRVTV_INSTRMNT_ELDM_Table">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_OTC_DRVTV_INSTRMNT_ELDM_Table/BIRD_OTC_DRVTV_INSTRMNT_ELDMs"/>
@@ -1128,6 +1133,20 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_RSK_FAC_SA_ELDM/RSK_CLSS"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_RSK_FAC_SA_ELDM/Fundamental_review_of_the_trading_book_standard_approach_risk_measure_has_risk_measure_in_Risk_factor_for_standardised_approach_2wayassociation"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_RSK_FAC_SA_ELDM/BIRD_RSK_FAC_SA_ELDM_uniqueID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_RSK_FAC_SA_ELDM/GIRR_FCTR_TYP"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_RSK_FAC_SA_ELDM/MN_CRRNCY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_RSK_FAC_SA_ELDM/SCND_CRRNCY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_RSK_FAC_SA_ELDM/BS_CRRNCY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_RSK_FAC_SA_ELDM/CRRNCY"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_RSK_FAC_SA_ELDM/linked_BIRD_EQTY_SCRTY_ELDM"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_RSK_FAC_SA_ELDM/EQUTY_FCTR_TYP"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_RSK_FAC_SA_ELDM/linked_BIRD_ISSR_ELDM"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_RSK_FAC_SA_ELDM/CRDT_SPRD_RSK_CRDT_QLTY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_RSK_FAC_SA_ELDM/CRDT_SPRD_RSK_CRV_TYP"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_RSK_FAC_SA_ELDM/DLVRY_LCTN"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_RSK_FAC_SA_ELDM/CMMDTY_TYP"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_RSK_FAC_SA_ELDM/linked_BIRD_ABS_ELDM"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_RSK_FAC_SA_ELDM/BIRD_RSK_FAC_SA_ELDM_discrimitaor"/>
     </genClasses>
     <genClasses ecoreClass="input_tables.ecore#//BIRD_RSK_FAC_SA_ELDM_Table">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_RSK_FAC_SA_ELDM_Table/BIRD_RSK_FAC_SA_ELDMs"/>
@@ -1358,19 +1377,8 @@
     <genClasses ecoreClass="input_tables.ecore#//BIRD_SCRTSTN_ELDM_Table">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_SCRTSTN_ELDM_Table/BIRD_SCRTSTN_ELDMs"/>
     </genClasses>
-    <genClasses ecoreClass="input_tables.ecore#//BIRD_SCRTSTN_CRRLTN_TRDNG_PRTFL_RSK_FCTR_STNDRDSD_APPRCH_ELDM"/>
-    <genClasses ecoreClass="input_tables.ecore#//BIRD_SCRTSTN_CRRLTN_TRDNG_PRTFL_RSK_FCTR_STNDRDSD_APPRCH_ELDM_Table">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_SCRTSTN_CRRLTN_TRDNG_PRTFL_RSK_FCTR_STNDRDSD_APPRCH_ELDM_Table/BIRD_SCRTSTN_CRRLTN_TRDNG_PRTFL_RSK_FCTR_STNDRDSD_APPRCH_ELDMs"/>
-    </genClasses>
-    <genClasses ecoreClass="input_tables.ecore#//BIRD_SCRTSTN_NN_CRRLTN_TRDNG_PRTFL_RSK_FCTR_FR_STNDRDSD_APPRCH_ELDM">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_SCRTSTN_NN_CRRLTN_TRDNG_PRTFL_RSK_FCTR_FR_STNDRDSD_APPRCH_ELDM/ASST_BCKD_SCRTY_RPRTNG_AGNT_ID"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_SCRTSTN_NN_CRRLTN_TRDNG_PRTFL_RSK_FCTR_FR_STNDRDSD_APPRCH_ELDM/ASST_BCKD_SCRTY_RFRNC_DT"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_SCRTSTN_NN_CRRLTN_TRDNG_PRTFL_RSK_FCTR_FR_STNDRDSD_APPRCH_ELDM/ASST_BCKD_SCRTY_ID"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_SCRTSTN_NN_CRRLTN_TRDNG_PRTFL_RSK_FCTR_FR_STNDRDSD_APPRCH_ELDM/linked_BIRD_ABS_ELDM"/>
-    </genClasses>
-    <genClasses ecoreClass="input_tables.ecore#//BIRD_SCRTSTN_NN_CRRLTN_TRDNG_PRTFL_RSK_FCTR_FR_STNDRDSD_APPRCH_ELDM_Table">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_SCRTSTN_NN_CRRLTN_TRDNG_PRTFL_RSK_FCTR_FR_STNDRDSD_APPRCH_ELDM_Table/BIRD_SCRTSTN_NN_CRRLTN_TRDNG_PRTFL_RSK_FCTR_FR_STNDRDSD_APPRCH_ELDMs"/>
-    </genClasses>
+    <genClasses ecoreClass="input_tables.ecore#//BIRD_SCRTSTN_CRRLTN_TRDNG_PRTFL_RSK_FCTR_STNDRDSD_APPRCH_ELDM_Table"/>
+    <genClasses ecoreClass="input_tables.ecore#//BIRD_SCRTSTN_NN_CRRLTN_TRDNG_PRTFL_RSK_FCTR_FR_STNDRDSD_APPRCH_ELDM_Table"/>
     <genClasses ecoreClass="input_tables.ecore#//BIRD_SCRTSTN_TRNCH_ELDM">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_SCRTSTN_TRNCH_ELDM/TRNCH_ID"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_SCRTSTN_TRNCH_ELDM/TRNCH_NM"/>
@@ -1590,7 +1598,6 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_SCRTY_PSTN_ELDM/linked_BIRD_INVSTR_ELDM"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_SCRTY_PSTN_ELDM/linked_BIRD_SCRTY_ELDM"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_SCRTY_PSTN_ELDM/Security_position_may_have_Security_position_derived_data_2wayassociation"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_SCRTY_PSTN_ELDM/Security_position_specifies_Fundamental_review_of_the_trading_book_standard_approach_risk_measure_for_security_positions_2wayassociation"/>
     </genClasses>
     <genClasses ecoreClass="input_tables.ecore#//BIRD_SCRTY_PSTN_ELDM_Table">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_SCRTY_PSTN_ELDM_Table/BIRD_SCRTY_PSTN_ELDMs"/>
@@ -1729,7 +1736,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_ABS_ELDM/SCRTY_RNK_LVL"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_ABS_ELDM/TYP_ASST_PRVDD_SCRTY"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_ABS_ELDM/Asset_backed_security_acts_as_a_Tranche_in_a_Traditional_securitisation_2wayassociation"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_ABS_ELDM/Asset_backed_security_has_Securitisation_non_correlation_trading_portfolio_non_CTP_Risk_Factor_for_standardised_approach_2wayassociation"/>
     </genClasses>
     <genClasses ecoreClass="input_tables.ecore#//BIRD_ABS_ELDM_Table">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_ABS_ELDM_Table/BIRD_ABS_ELDMs"/>
@@ -2075,13 +2081,7 @@
     <genClasses ecoreClass="input_tables.ecore#//BIRD_CMMDTY_CLLTRL_ELDM_Table">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_CMMDTY_CLLTRL_ELDM_Table/BIRD_CMMDTY_CLLTRL_ELDMs"/>
     </genClasses>
-    <genClasses ecoreClass="input_tables.ecore#//BIRD_CMMDTY_RSK_FCTR_FR_STNDRDSD_APPRCH_ELDM">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_CMMDTY_RSK_FCTR_FR_STNDRDSD_APPRCH_ELDM/DLVRY_LCTN"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_CMMDTY_RSK_FCTR_FR_STNDRDSD_APPRCH_ELDM/CMMDTY_TYP"/>
-    </genClasses>
-    <genClasses ecoreClass="input_tables.ecore#//BIRD_CMMDTY_RSK_FCTR_FR_STNDRDSD_APPRCH_ELDM_Table">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_CMMDTY_RSK_FCTR_FR_STNDRDSD_APPRCH_ELDM_Table/BIRD_CMMDTY_RSK_FCTR_FR_STNDRDSD_APPRCH_ELDMs"/>
-    </genClasses>
+    <genClasses ecoreClass="input_tables.ecore#//BIRD_CMMDTY_RSK_FCTR_FR_STNDRDSD_APPRCH_ELDM_Table"/>
     <genClasses ecoreClass="input_tables.ecore#//BIRD_CMMRCL_RL_ESTT_CLLTRL_ELDM"/>
     <genClasses ecoreClass="input_tables.ecore#//BIRD_CMMRCL_RL_ESTT_CLLTRL_ELDM_Table">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_CMMRCL_RL_ESTT_CLLTRL_ELDM_Table/BIRD_CMMRCL_RL_ESTT_CLLTRL_ELDMs"/>
@@ -2379,18 +2379,7 @@
     <genClasses ecoreClass="input_tables.ecore#//BIRD_CRDT_RSK_MTGTN_ASSGNMNT_ELDM_Table">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_CRDT_RSK_MTGTN_ASSGNMNT_ELDM_Table/BIRD_CRDT_RSK_MTGTN_ASSGNMNT_ELDMs"/>
     </genClasses>
-    <genClasses ecoreClass="input_tables.ecore#//BIRD_CRDT_SPRD_RSK_NN_SCRTSTN_RSK_FCTR_STNDRDSD_APPRCH_ELDM">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_CRDT_SPRD_RSK_NN_SCRTSTN_RSK_FCTR_STNDRDSD_APPRCH_ELDM/ISSR_ID"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_CRDT_SPRD_RSK_NN_SCRTSTN_RSK_FCTR_STNDRDSD_APPRCH_ELDM/CRDT_SPRD_RSK_CRDT_QLTY"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_CRDT_SPRD_RSK_NN_SCRTSTN_RSK_FCTR_STNDRDSD_APPRCH_ELDM/CRDT_SPRD_RSK_CRV_TYP"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_CRDT_SPRD_RSK_NN_SCRTSTN_RSK_FCTR_STNDRDSD_APPRCH_ELDM/ISSR_RFRNC_DT"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_CRDT_SPRD_RSK_NN_SCRTSTN_RSK_FCTR_STNDRDSD_APPRCH_ELDM/ISSR_RPRTNG_AGNT_ID"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_CRDT_SPRD_RSK_NN_SCRTSTN_RSK_FCTR_STNDRDSD_APPRCH_ELDM/ISSR_RL_TYP"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_CRDT_SPRD_RSK_NN_SCRTSTN_RSK_FCTR_STNDRDSD_APPRCH_ELDM/linked_BIRD_ISSR_ELDM"/>
-    </genClasses>
-    <genClasses ecoreClass="input_tables.ecore#//BIRD_CRDT_SPRD_RSK_NN_SCRTSTN_RSK_FCTR_STNDRDSD_APPRCH_ELDM_Table">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_CRDT_SPRD_RSK_NN_SCRTSTN_RSK_FCTR_STNDRDSD_APPRCH_ELDM_Table/BIRD_CRDT_SPRD_RSK_NN_SCRTSTN_RSK_FCTR_STNDRDSD_APPRCH_ELDMs"/>
-    </genClasses>
+    <genClasses ecoreClass="input_tables.ecore#//BIRD_CRDT_SPRD_RSK_NN_SCRTSTN_RSK_FCTR_STNDRDSD_APPRCH_ELDM_Table"/>
     <genClasses ecoreClass="input_tables.ecore#//BIRD_CRDT_TRNSFR_OTHR_SCRTSTN_CVRD_BND_PRGRM_ELDM">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_CRDT_TRNSFR_OTHR_SCRTSTN_CVRD_BND_PRGRM_ELDM/CRDT_TRNSFR_OTHR_SCRTSTN_CVRD_BND_PRGRM_ID"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_CRDT_TRNSFR_OTHR_SCRTSTN_CVRD_BND_PRGRM_ELDM/CRDT_TRNSFR_OTHR_SCRTSTN_CVRD_BND_PRGRM_RPRTNG_AGNT_ID"/>
@@ -2427,15 +2416,7 @@
     <genClasses ecoreClass="input_tables.ecore#//BIRD_CRRNT_TX_LBLTY_ELDM_Table">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_CRRNT_TX_LBLTY_ELDM_Table/BIRD_CRRNT_TX_LBLTY_ELDMs"/>
     </genClasses>
-    <genClasses ecoreClass="input_tables.ecore#//BIRD_CRVTR_ELDM">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_CRVTR_ELDM/CRVTR_RSK_WGHT"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_CRVTR_ELDM/SHCK_DRCTN"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_CRVTR_ELDM/CRVTR_VLTN_DFFRNC"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_CRVTR_ELDM/CRRNCY_RCRD"/>
-    </genClasses>
-    <genClasses ecoreClass="input_tables.ecore#//BIRD_CRVTR_ELDM_Table">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_CRVTR_ELDM_Table/BIRD_CRVTR_ELDMs"/>
-    </genClasses>
+    <genClasses ecoreClass="input_tables.ecore#//BIRD_CRVTR_ELDM_Table"/>
     <genClasses ecoreClass="input_tables.ecore#//BIRD_CSH_HND_ELDM">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_CSH_HND_ELDM/CRRNCY"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_CSH_HND_ELDM/CSH_HND_RPRTNG_AGNT_ID"/>
@@ -2646,14 +2627,7 @@
     <genClasses ecoreClass="input_tables.ecore#//BIRD_DFRRD_TX_LBLTY_ELDM_Table">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_DFRRD_TX_LBLTY_ELDM_Table/BIRD_DFRRD_TX_LBLTY_ELDMs"/>
     </genClasses>
-    <genClasses ecoreClass="input_tables.ecore#//BIRD_DLT_SNSTVTY_ELDM">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_DLT_SNSTVTY_ELDM/CRRNCY_RCRD"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_DLT_SNSTVTY_ELDM/DLT_SNSTVTY"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_DLT_SNSTVTY_ELDM/TNR"/>
-    </genClasses>
-    <genClasses ecoreClass="input_tables.ecore#//BIRD_DLT_SNSTVTY_ELDM_Table">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_DLT_SNSTVTY_ELDM_Table/BIRD_DLT_SNSTVTY_ELDMs"/>
-    </genClasses>
+    <genClasses ecoreClass="input_tables.ecore#//BIRD_DLT_SNSTVTY_ELDM_Table"/>
     <genClasses ecoreClass="input_tables.ecore#//BIRD_DPST_ELDM">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_DPST_ELDM/RPYMNT_RGHTS"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_DPST_ELDM/DPST_TYP"/>
@@ -2835,20 +2809,10 @@
     <genClasses ecoreClass="input_tables.ecore#//BIRD_EQTY_INSTRMNT_NT_SCRTY_ISSR_ASSGNMNT_ELDM_Table">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_EQTY_INSTRMNT_NT_SCRTY_ISSR_ASSGNMNT_ELDM_Table/BIRD_EQTY_INSTRMNT_NT_SCRTY_ISSR_ASSGNMNT_ELDMs"/>
     </genClasses>
-    <genClasses ecoreClass="input_tables.ecore#//BIRD_EQTY_RSK_FCTR_ELDM">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_EQTY_RSK_FCTR_ELDM/EQTY_SCRTY_RPRTNG_AGNT_ID"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_EQTY_RSK_FCTR_ELDM/EQTY_SCRTY_ID"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_EQTY_RSK_FCTR_ELDM/EQUTY_FCTR_TYP"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_EQTY_RSK_FCTR_ELDM/EQTY_SCRTY_RFRNC_DT"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_EQTY_RSK_FCTR_ELDM/linked_BIRD_EQTY_SCRTY_ELDM"/>
-    </genClasses>
-    <genClasses ecoreClass="input_tables.ecore#//BIRD_EQTY_RSK_FCTR_ELDM_Table">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_EQTY_RSK_FCTR_ELDM_Table/BIRD_EQTY_RSK_FCTR_ELDMs"/>
-    </genClasses>
+    <genClasses ecoreClass="input_tables.ecore#//BIRD_EQTY_RSK_FCTR_ELDM_Table"/>
     <genClasses ecoreClass="input_tables.ecore#//BIRD_EQTY_SCRTY_ELDM">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_EQTY_SCRTY_ELDM/TTL_NMBR_SHRS_ISSD"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_EQTY_SCRTY_ELDM/TTL_AMNT_CPTL_ISSD"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_EQTY_SCRTY_ELDM/Equity_security_has_Equity_risk_factor_for_standardised_approach_2wayassociation"/>
     </genClasses>
     <genClasses ecoreClass="input_tables.ecore#//BIRD_EQTY_SCRTY_ELDM_Table">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_EQTY_SCRTY_ELDM_Table/BIRD_EQTY_SCRTY_ELDMs"/>
@@ -2918,7 +2882,6 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_EXCHNG_TRDBL_DRVTV_PSTN_ELDM/linked_BIRD_BUYR_ELDM"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_EXCHNG_TRDBL_DRVTV_PSTN_ELDM/linked_BIRD_EXCHNG_TRDBL_DRVTV_ELDM"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_EXCHNG_TRDBL_DRVTV_PSTN_ELDM/Exchange_tradable_derivative_position_acts_in_Exchange_tradable_derivative_position_role_2wayassociation"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_EXCHNG_TRDBL_DRVTV_PSTN_ELDM/Exchange_tradable_derivative_position_specifies_Fundamental_review_of_the_trading_book_standard_approach_risk_measure_for_ETD_positions_2wayassociation"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_EXCHNG_TRDBL_DRVTV_PSTN_ELDM/linked_BIRD_SLLR_ELDM"/>
     </genClasses>
     <genClasses ecoreClass="input_tables.ecore#//BIRD_EXCHNG_TRDBL_DRVTV_PSTN_ELDM_Table">
@@ -2969,52 +2932,28 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ELDM/RSK_MSR_TYP_PSTN"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ELDM/RSK_FCTR_STNDRDSD_APPRCH_RFRNC_DT"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ELDM/linked_BIRD_RSK_FAC_SA_ELDM"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ELDM/Risk_measure_type_delegate"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ELDM/Risk_measure_type_by_position_delegate"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ELDM/BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ELDM_uniqueID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ELDM/OPTN_MTRTY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ELDM/CRRNCY_RCRD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ELDM/TNR"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ELDM/DLT_SNSTVTY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ELDM/CRVTR_VLTN_DFFRNC"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ELDM/SHCK_DRCTN"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ELDM/CRVTR_RSK_WGHT"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ELDM/VG_SNSTVTY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ELDM/UNDRLYNG_RSDL_MTRTY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ELDM/Risk_measure_type_discriminator"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ELDM/linked_BIRD_EXCHNG_TRDBL_DRVTV_PSTN_ELDM"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ELDM/linked_BIRD_SCRTY_PSTN_ELDM"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ELDM/linked_BIRD_OTC_DRVTV_INSTRMNT_ELDM"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ELDM/Risk_measure_type_by_position_discriminator"/>
     </genClasses>
     <genClasses ecoreClass="input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ELDM_Table">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ELDM_Table/BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ELDMs"/>
     </genClasses>
-    <genClasses ecoreClass="input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ETD_PSTNS_ELDM">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ETD_PSTNS_ELDM/BYR_PRTY_RFRNC_DT"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ETD_PSTNS_ELDM/SLLR_PRTY_RL_TYP"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ETD_PSTNS_ELDM/SLLR_PRTY_RFRNC_DT"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ETD_PSTNS_ELDM/BYR_PRTY_ID"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ETD_PSTNS_ELDM/EXCHNG_TRDBL_DRVTV_SCRTY_RFRNC_DT"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ETD_PSTNS_ELDM/EXCHNG_TRDBL_DRVTV_SCRTY_RPRTNG_AGNT_ID"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ETD_PSTNS_ELDM/BYR_PRTY_RPRTNG_AGNT_ID"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ETD_PSTNS_ELDM/SLLR_PRTY_RPRTNG_AGNT_ID"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ETD_PSTNS_ELDM/EXCHNG_TRDBL_DRVTV_SCRTY_ID"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ETD_PSTNS_ELDM/BYR_PRTY_RL_TYP"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ETD_PSTNS_ELDM/SLLR_PRTY_ID"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ETD_PSTNS_ELDM/linked_BIRD_EXCHNG_TRDBL_DRVTV_PSTN_ELDM"/>
-    </genClasses>
-    <genClasses ecoreClass="input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ETD_PSTNS_ELDM_Table">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ETD_PSTNS_ELDM_Table/BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ETD_PSTNS_ELDMs"/>
-    </genClasses>
-    <genClasses ecoreClass="input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_FR_SCRTY_PSTNS_ELDM">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_FR_SCRTY_PSTNS_ELDM/SCRTY_RPRTNG_AGNT_ID"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_FR_SCRTY_PSTNS_ELDM/SCRTY_RFRNC_DT"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_FR_SCRTY_PSTNS_ELDM/INVSTR_PRTY_RPRTNG_AGNT_ID"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_FR_SCRTY_PSTNS_ELDM/INVSTR_PRTY_RL_TYP"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_FR_SCRTY_PSTNS_ELDM/INVSTR_PRTY_ID"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_FR_SCRTY_PSTNS_ELDM/INVSTR_PRTY_RFRNC_DT"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_FR_SCRTY_PSTNS_ELDM/SCRTY_ID"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_FR_SCRTY_PSTNS_ELDM/linked_BIRD_SCRTY_PSTN_ELDM"/>
-    </genClasses>
-    <genClasses ecoreClass="input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_FR_SCRTY_PSTNS_ELDM_Table">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_FR_SCRTY_PSTNS_ELDM_Table/BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_FR_SCRTY_PSTNS_ELDMs"/>
-    </genClasses>
-    <genClasses ecoreClass="input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_OTC_PSTNS_ELDM">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_OTC_PSTNS_ELDM/INSTRMNT_RPRTNG_AGNT_ID"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_OTC_PSTNS_ELDM/INSTRMNT_RFRNC_DT"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_OTC_PSTNS_ELDM/INSTRMNT_ID"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_OTC_PSTNS_ELDM/linked_BIRD_OTC_DRVTV_INSTRMNT_ELDM"/>
-    </genClasses>
-    <genClasses ecoreClass="input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_OTC_PSTNS_ELDM_Table">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_OTC_PSTNS_ELDM_Table/BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_OTC_PSTNS_ELDMs"/>
-    </genClasses>
+    <genClasses ecoreClass="input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ETD_PSTNS_ELDM_Table"/>
+    <genClasses ecoreClass="input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_FR_SCRTY_PSTNS_ELDM_Table"/>
+    <genClasses ecoreClass="input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_OTC_PSTNS_ELDM_Table"/>
     <genClasses ecoreClass="input_tables.ecore#//BIRD_FNDS_GNRL_BNKNG_RSK_ELDM">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_FNDS_GNRL_BNKNG_RSK_ELDM/HLD_SL_INDCTR"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_FNDS_GNRL_BNKNG_RSK_ELDM/FNDS_GNRL_BNKNG_RSK_RPRTNG_AGNT_ID"/>
@@ -3302,13 +3241,7 @@
     <genClasses ecoreClass="input_tables.ecore#//BIRD_FV_EXCHNG_TRDBL_DRVTV_LBLTY_PSTN_ELDM_Table">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_FV_EXCHNG_TRDBL_DRVTV_LBLTY_PSTN_ELDM_Table/BIRD_FV_EXCHNG_TRDBL_DRVTV_LBLTY_PSTN_ELDMs"/>
     </genClasses>
-    <genClasses ecoreClass="input_tables.ecore#//BIRD_FX_RSK_FACTR_SA_ELDM">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_FX_RSK_FACTR_SA_ELDM/BS_CRRNCY"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_FX_RSK_FACTR_SA_ELDM/CRRNCY"/>
-    </genClasses>
-    <genClasses ecoreClass="input_tables.ecore#//BIRD_FX_RSK_FACTR_SA_ELDM_Table">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_FX_RSK_FACTR_SA_ELDM_Table/BIRD_FX_RSK_FACTR_SA_ELDMs"/>
-    </genClasses>
+    <genClasses ecoreClass="input_tables.ecore#//BIRD_FX_RSK_FACTR_SA_ELDM_Table"/>
     <genClasses ecoreClass="input_tables.ecore#//BIRD_FXD_INTRST_FNNCL_ASST_INSTRMNT_ELDM">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_FXD_INTRST_FNNCL_ASST_INSTRMNT_ELDM/INSTRMNT_ID"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_FXD_INTRST_FNNCL_ASST_INSTRMNT_ELDM/RPRTNG_AGNT_ID"/>
@@ -3326,14 +3259,7 @@
     <genClasses ecoreClass="input_tables.ecore#//BIRD_GDWLL_ELDM_Table">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_GDWLL_ELDM_Table/BIRD_GDWLL_ELDMs"/>
     </genClasses>
-    <genClasses ecoreClass="input_tables.ecore#//BIRD_GIRR_RSK_FCTR_ELDM">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_GIRR_RSK_FCTR_ELDM/GIRR_FCTR_TYP"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_GIRR_RSK_FCTR_ELDM/MN_CRRNCY"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//BIRD_GIRR_RSK_FCTR_ELDM/SCND_CRRNCY"/>
-    </genClasses>
-    <genClasses ecoreClass="input_tables.ecore#//BIRD_GIRR_RSK_FCTR_ELDM_Table">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_GIRR_RSK_FCTR_ELDM_Table/BIRD_GIRR_RSK_FCTR_ELDMs"/>
-    </genClasses>
+    <genClasses ecoreClass="input_tables.ecore#//BIRD_GIRR_RSK_FCTR_ELDM_Table"/>
     <genClasses ecoreClass="input_tables.ecore#//BIRD_GLD_CLLTRL_ELDM"/>
     <genClasses ecoreClass="input_tables.ecore#//BIRD_GLD_CLLTRL_ELDM_Table">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_GLD_CLLTRL_ELDM_Table/BIRD_GLD_CLLTRL_ELDMs"/>
@@ -3628,7 +3554,6 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_ISS_BSD_RTNG_SYSTM_ELDM_Table/BIRD_ISS_BSD_RTNG_SYSTM_ELDMs"/>
     </genClasses>
     <genClasses ecoreClass="input_tables.ecore#//BIRD_ISSR_ELDM">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_ISSR_ELDM/Issuer_has_Credit_spread_risk_CSR_non_securitisation_risk_factor_for_standardised_approach_2wayassociation"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_ISSR_ELDM/Issuer_issues_Equity_instrument_that_is_not_a_security_via_Equity_instrument_that_is_not_a_security_Issuer_assignment_2wayassociation"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_ISSR_ELDM/Issuer_issues_Security_or_Exchange_tradable_derivative_s_via_Security_Issuer_assignment_2wayassociation"/>
     </genClasses>
@@ -5569,20 +5494,12 @@
     <genClasses ecoreClass="input_tables.ecore#//Past_due_financial_asset_instrument_indicator_Table">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference input_tables.ecore#//Past_due_financial_asset_instrument_indicator_Table/Past_due_financial_asset_instrument_indicators"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="input_tables.ecore#//Risk_measure_type">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference input_tables.ecore#//Risk_measure_type/parent_BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ELDM"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//Risk_measure_type/Risk_measure_type_uniqueID"/>
-    </genClasses>
+    <genClasses image="false" ecoreClass="input_tables.ecore#//Risk_measure_type"/>
     <genClasses ecoreClass="input_tables.ecore#//Risk_measure_type_Table">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference input_tables.ecore#//Risk_measure_type_Table/Risk_measure_types"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="input_tables.ecore#//Risk_measure_type_by_position">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference input_tables.ecore#//Risk_measure_type_by_position/parent_BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_ELDM"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//Risk_measure_type_by_position/Risk_measure_type_by_position_uniqueID"/>
-    </genClasses>
-    <genClasses ecoreClass="input_tables.ecore#//Risk_measure_type_by_position_Table">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference input_tables.ecore#//Risk_measure_type_by_position_Table/Risk_measure_type_by_positions"/>
-    </genClasses>
+    <genClasses image="false" ecoreClass="input_tables.ecore#//Risk_measure_type_by_position"/>
+    <genClasses ecoreClass="input_tables.ecore#//Risk_measure_type_by_position_Table"/>
     <genClasses image="false" ecoreClass="input_tables.ecore#//Instrument_type_by_origin">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference input_tables.ecore#//Instrument_type_by_origin/parent_BIRD_INSTRMNT_ELDM"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute input_tables.ecore#//Instrument_type_by_origin/Instrument_type_by_origin_uniqueID"/>
@@ -5736,6 +5653,11 @@
     </genClasses>
     <genClasses ecoreClass="input_tables.ecore#//Security_borrowing_and_lending_transaction_component_type_by_direction_Table">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference input_tables.ecore#//Security_borrowing_and_lending_transaction_component_type_by_direction_Table/Security_borrowing_and_lending_transaction_component_type_by_directions"/>
+    </genClasses>
+    <genClasses ecoreClass="input_tables.ecore#//BIRD_SNSTVTY_ELDM_Table"/>
+    <genClasses ecoreClass="input_tables.ecore#//BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_SUPER_ELDM_Table"/>
+    <genClasses image="false" ecoreClass="input_tables.ecore#//BIRD_RSK_FCTR_STNDRDSD_APPRCH_ALL_Table">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference input_tables.ecore#//BIRD_RSK_FCTR_STNDRDSD_APPRCH_ALL_Table/BIRD_RSK_FCTR_STNDRDSD_APPRCH_ELDMs"/>
     </genClasses>
   </genPackages>
   <genPackages prefix="Ecore" disposableProviderFactory="true" ecorePackage="Ecore.ecore#/">
@@ -18467,6 +18389,11 @@
       <genEnumLiterals ecoreEnumLiteral="sdd_domains.ecore#//STFF_TYP_domain/Identified_staff"/>
       <genEnumLiterals ecoreEnumLiteral="sdd_domains.ecore#//STFF_TYP_domain/Management_body_in_its_management_function_senior_management"/>
       <genEnumLiterals ecoreEnumLiteral="sdd_domains.ecore#//STFF_TYP_domain/All_type_of_staff_Total_"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="sdd_domains.ecore#//Risk_measure_type_domain">
+      <genEnumLiterals ecoreEnumLiteral="sdd_domains.ecore#//Risk_measure_type_domain/BIRD_VG_SNSTVTY_ELDM"/>
+      <genEnumLiterals ecoreEnumLiteral="sdd_domains.ecore#//Risk_measure_type_domain/BIRD_CRVTR_ELDM"/>
+      <genEnumLiterals ecoreEnumLiteral="sdd_domains.ecore#//Risk_measure_type_domain/BIRD_DLT_SNSTVTY_ELDM"/>
     </genEnums>
   </genPackages>
 </genmodel:GenModel>
