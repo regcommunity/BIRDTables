@@ -7,6 +7,8 @@ Forward engineering in BIRDTables is done using Eclipse Edapt ( https://eclipse.
 
 The use of Edapt allows efficient test data that is created in the LDM with tool support to be automatically migrated to be test data in the concise input layer at the click of a button.
 
+An example of using Edapt to forward engineer all the FRTB related entitites of the BIRD LDM into 2 tables, and then migrate FRTB tests data automatically is shown here: https://youtu.be/0F7KOhcIZS4
+
 
 
 
