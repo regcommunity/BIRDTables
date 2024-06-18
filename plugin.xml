@@ -7,4 +7,33 @@
 <plugin>
 
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated input_tables -->
+      <package
+            uri="input_tables_1"
+            class="input_tables.Input_tablesPackage"
+            genModel="src/input_tables.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated input_tables -->
+      <package
+            uri="http://www.eclipse.org/emf/2002/Ecore"
+            class="ecore.EcorePackage"
+            genModel="src/input_tables.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated input_tables -->
+      <package
+            uri="sdd_domains"
+            class="sdd_domains.Sdd_domainsPackage"
+            genModel="src/input_tables.genmodel"/>
+   </extension>
+   <extension
+         point="org.eclipse.emf.edapt.migrators">
+      <migrator
+            path="src/input_tables.history">
+      </migrator>
+   </extension>
 </plugin>
