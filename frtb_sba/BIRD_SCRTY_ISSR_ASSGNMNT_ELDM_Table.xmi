@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<input_tables:BIRD_SCRTY_ISSR_ASSGNMNT_ELDM_Table xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:input_tables="input_tables">
+  <BIRD_SCRTY_ISSR_ASSGNMNT_ELDMs>
+    <linked_BIRD_SCRTY_EXCHNG_TRDBL_DRVTV_ELDM href="BIRD_SCRTY_ELDM_Table.xmi.backup#security1"/>
+    <linked_BIRD_ISSR_ELDM href="BIRD_ISSR_ELDM_Table.xmi.backup#issuer1"/>
+  </BIRD_SCRTY_ISSR_ASSGNMNT_ELDMs>
+</input_tables:BIRD_SCRTY_ISSR_ASSGNMNT_ELDM_Table>

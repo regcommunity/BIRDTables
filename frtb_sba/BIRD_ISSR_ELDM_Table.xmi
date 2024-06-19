@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<input_tables:BIRD_ISSR_ELDM_Table xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:input_tables="input_tables">
+  <BIRD_ISSR_ELDMs Entity_role_type_uniqueID="issuer1" PRTY_ID="">
+    <parent_BIRD_ENTTY_RL_ELDM href="BIRD_ENTTY_RL_ELDM_Table.xmi.backup#issuer1"/>
+    <linked_BIRD_PRTY_ELDM href="BIRD_PRTY_ELDM_Table.xmi.backup#party1"/>
+    <Issuer_issues_Security_or_Exchange_tradable_derivative_s_via_Security_Issuer_assignment_2wayassociation href="BIRD_SCRTY_ISSR_ASSGNMNT_ELDM_Table.xmi.backup#//@BIRD_SCRTY_ISSR_ASSGNMNT_ELDMs.0"/>
+  </BIRD_ISSR_ELDMs>
+</input_tables:BIRD_ISSR_ELDM_Table>

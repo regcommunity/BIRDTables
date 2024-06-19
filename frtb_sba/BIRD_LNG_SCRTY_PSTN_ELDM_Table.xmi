@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<input_tables:BIRD_LNG_SCRTY_PSTN_ELDM_Table xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:input_tables="input_tables">
+  <BIRD_LNG_SCRTY_PSTN_ELDMs BIRD_SCRTY_EXCHNG_TRDBL_DRVTV_PSTN_ELDM_uniqueID="position1" SCRTY_ID="position1" INVSTR_PRTY_RL_TYP="13" SCRTY_PSTN_TYP="5" NGTBL_SCRTY_PSTN_INDCTR="19">
+    <linked_BIRD_SCRTY_ELDM href="BIRD_SCRTY_ELDM_Table.xmi.backup#security1"/>
+    <linked_BIRD_INVSTR_ELDM href="BIRD_INVSTR_ELDM_Table.xmi.backup#invester1"/>
+    <Security_position_specifies_Fundamental_review_of_the_trading_book_standard_approach_risk_measure_for_security_positions_2wayassociation href="BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_FR_SCRTY_PSTNS_ELDM_Table.xmi.backup#DeltaSensitivity1"/>
+    <Security_position_specifies_Fundamental_review_of_the_trading_book_standard_approach_risk_measure_for_security_positions_2wayassociation href="BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_FR_SCRTY_PSTNS_ELDM_Table.xmi.backup#DeltaSensitivity2"/>
+  </BIRD_LNG_SCRTY_PSTN_ELDMs>
+  <BIRD_LNG_SCRTY_PSTN_ELDMs BIRD_SCRTY_EXCHNG_TRDBL_DRVTV_PSTN_ELDM_uniqueID="position2" SCRTY_ID="position1" INVSTR_PRTY_RL_TYP="13" SCRTY_PSTN_TYP="5" NGTBL_SCRTY_PSTN_INDCTR="19">
+    <linked_BIRD_SCRTY_ELDM href="BIRD_SCRTY_ELDM_Table.xmi.backup#security1"/>
+    <linked_BIRD_INVSTR_ELDM href="BIRD_INVSTR_ELDM_Table.xmi.backup#invester1"/>
+    <Security_position_specifies_Fundamental_review_of_the_trading_book_standard_approach_risk_measure_for_security_positions_2wayassociation href="BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_FR_SCRTY_PSTNS_ELDM_Table.xmi.backup#DeltaSensitivity3"/>
+    <Security_position_specifies_Fundamental_review_of_the_trading_book_standard_approach_risk_measure_for_security_positions_2wayassociation href="BIRD_FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_FR_SCRTY_PSTNS_ELDM_Table.xmi.backup#DeltaSensitivity4"/>
+  </BIRD_LNG_SCRTY_PSTN_ELDMs>
+</input_tables:BIRD_LNG_SCRTY_PSTN_ELDM_Table>

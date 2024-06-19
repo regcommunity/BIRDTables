@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<input_tables:BIRD_INVSTR_ELDM_Table xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:input_tables="input_tables">
+  <BIRD_INVSTR_ELDMs Entity_role_type_uniqueID="invester1" PRTY_ID="invester1">
+    <parent_BIRD_ENTTY_RL_ELDM href="BIRD_ENTTY_RL_ELDM_Table.xmi.backup#invester1"/>
+    <linked_BIRD_PRTY_ELDM href="BIRD_PRTY_ELDM_Table.xmi.backup#party1"/>
+    <Investor_invests_in_Security_position_2wayassociation href="BIRD_LNG_SCRTY_PSTN_ELDM_Table.xmi.backup#position1"/>
+    <Investor_invests_in_Security_position_2wayassociation href="BIRD_LNG_SCRTY_PSTN_ELDM_Table.xmi.backup#position2"/>
+  </BIRD_INVSTR_ELDMs>
+</input_tables:BIRD_INVSTR_ELDM_Table>

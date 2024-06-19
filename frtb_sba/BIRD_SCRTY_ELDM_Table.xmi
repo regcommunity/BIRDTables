@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<input_tables:BIRD_SCRTY_ELDM_Table xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:input_tables="input_tables">
+  <BIRD_SCRTY_ELDMs SCRTY_ID="security1" BIRD_SCRTY_EXCHNG_TRDBL_DRVTV_ELDM_uniqueID="security1">
+    <Security_and_exchange_tradable_derivative_is_issued_by_Issuer_via_Security_Issuer_assignment_2wayassociation href="BIRD_SCRTY_ISSR_ASSGNMNT_ELDM_Table.xmi.backup#//@BIRD_SCRTY_ISSR_ASSGNMNT_ELDMs.0"/>
+    <Security_has_Security_derived_data_2wayassociation href="BIRD_SCRTY_DRVD_DT_ELDM_Table.xmi.backup#//@BIRD_SCRTY_DRVD_DT_ELDMs.0"/>
+    <Security_is_involved_in_Security_position_2wayassociation href="BIRD_LNG_SCRTY_PSTN_ELDM_Table.xmi.backup#position1"/>
+    <Security_is_involved_in_Security_position_2wayassociation href="BIRD_LNG_SCRTY_PSTN_ELDM_Table.xmi.backup#position2"/>
+  </BIRD_SCRTY_ELDMs>
+</input_tables:BIRD_SCRTY_ELDM_Table>
